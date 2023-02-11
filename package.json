@@ -1,0 +1,19 @@
+{
+  "name": "node-tdd-adventure",
+  "version": "1.0.0",
+  "description": "This is a project developed in Typescript and NodeJs applying the mainly patterns as TDD testing and Clean architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcos-Roberto-Silva/Node-TDD-Adventure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcos-Roberto-Silva/Node-TDD-Adventure/issues"
+  },
+  "homepage": "https://github.com/Marcos-Roberto-Silva/Node-TDD-Adventure#readme"
+}
