@@ -4,8 +4,8 @@
   "description": "This is a project developed in Typescript and NodeJs applying the mainly patterns as TDD testing and Clean architecture.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTest",
-    "test:staged": "staged --passWithNoTest"
+    "test": "jest --passWithNoTests --watch",
+    "test:staged": "staged --passWithNoTests"
   },
   "repository": {
     "type": "git",
