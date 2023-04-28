@@ -4,7 +4,7 @@
   "description": "This is a project developed in Typescript and NodeJs applying the mainly patterns as TDD testing and Clean architecture.",
   "main": "index.js",
   "scripts": {
-    "start": "sucrase-node src/main/server.ts",
+    "start": "nodemon src/main/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
@@ -41,6 +41,7 @@
     "husky": "^8.0.3",
     "jest": "^29.4.2",
     "lint-staged": "^13.1.1",
+    "nodemon": "^2.0.22",
     "sucrase": "^3.32.0",
     "supertest": "^6.3.3",
     "ts-jest": "^29.0.5",
