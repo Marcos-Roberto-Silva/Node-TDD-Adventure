@@ -12,10 +12,14 @@ export class SignUpController implements Controller{
     }
 
     async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
+        console.info(
+            `Getting account attributes from frontend with user: ${JSON
+                .stringify(httpRequest.body.name)} and email: ${JSON
+                .stringify(httpRequest.body.email)}`);
         try {
             const {name, email, password, passwordConfirmation} = httpRequest.body;
+            const requiredFields = ["name", "email", "password", "passwordConfirmation"];
 
-            const requiredFields = ["name", "email", "password", "passwordConfirmation"]
             for (const field of requiredFields) {
                 if (!httpRequest.body[field]) {
                     return badRequest(new MissingParamError(field))
@@ -25,6 +29,7 @@ export class SignUpController implements Controller{
             if (password !== passwordConfirmation) {
                 return badRequest(new InvalidParamError('passwordConfirmation'));
             }
+
             const isValid = this.emailValidator.isValid(email)
 
             if (!isValid) {
@@ -35,7 +40,8 @@ export class SignUpController implements Controller{
                 name,
                 email,
                 password
-            })
+            });
+            
             return statusIsOk(account);
         } catch (error) {
             return serverError()
