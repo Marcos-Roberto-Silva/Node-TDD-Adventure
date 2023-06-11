@@ -45,4 +45,6 @@ describe("LogController decorator", () => {
         await sut.handle(httpRequest);
         expect(handleSpy).toHaveBeenCalledWith(httpRequest)
     });
+
+    it('', () => {});
 });
