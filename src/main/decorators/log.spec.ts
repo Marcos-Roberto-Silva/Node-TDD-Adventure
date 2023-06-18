@@ -1,7 +1,6 @@
 import {Controller, HttpRequest, HttpResponse} from "../../presentation/protocols";
 import {LogControllerDecorator} from "./log";
 
-
 const makeController = (): Controller => {
     class ControllerStub implements Controller {
         async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
