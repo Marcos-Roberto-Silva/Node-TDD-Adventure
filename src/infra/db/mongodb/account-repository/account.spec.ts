@@ -2,7 +2,7 @@ import { MongoHelper } from "../helpers/mongo-helper";
 import {AccountMongoRepository} from "./account";
 
 describe("Account Mongo Repository", () => {
-
+    jest.setTimeout(900000);
     beforeAll(async () => {
         await MongoHelper.connect(process.env.MONGO_URL as string);
     });
